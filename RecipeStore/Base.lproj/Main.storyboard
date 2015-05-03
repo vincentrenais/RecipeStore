@@ -34,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Tlb-LD-azp" kind="modal" identifier="UpdateRecipe" id="IRg-D4-qom"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -146,4 +149,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="IRg-D4-qom"/>
+    </inferredMetricsTieBreakers>
 </document>

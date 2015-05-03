@@ -9,6 +9,7 @@
 #import "RecipeStoreTableViewController.h"
 #import "AppDelegate.h"
 #import "Recipe.h"
+#import "AddRecipeViewController.h"
 
 @interface RecipeStoreTableViewController ()
 
@@ -49,6 +50,7 @@
             NSLog(@"Can't get the record %@ %@",error, [error localizedDescription]);
         }
     }
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -126,25 +128,39 @@
     [self.tableView endUpdates];
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Delete the row from the data source
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *managedObjectContext = [appDelegate managedObjectContext];
+    
+    if (managedObjectContext != nil)
+    {
+        Recipe *recipeToDelete = (Recipe *)[fetchResultsController objectAtIndexPath:indexPath];
+        [managedObjectContext deleteObject:recipeToDelete];
+        
+        NSError *error;
+        if (![managedObjectContext save:&error])
+        {
+            NSLog(@"Can't delete the record! %@ %@", error, [error localizedDescription]);
+        }
+    }
+
+
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -160,14 +176,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"UpdateRecipe"])
+    {
+        Recipe *selectedRecipe = [recipes objectAtIndex:[[self.tableView indexPathForSelectedRow] row]];
+        
+        UINavigationController *destViewController = segue.destinationViewController;
+        
+        AddRecipeViewController *recipeViewController = (AddRecipeViewController *)destViewController.topViewController;
+        
+        recipeViewController.selectedRecipe = selectedRecipe;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

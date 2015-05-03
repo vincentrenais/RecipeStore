@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *imageTextField;
 @property (strong, nonatomic) IBOutlet UITextField *prepTimeTextField;
 
+@property (strong) Recipe *selectedRecipe;
+
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
 
