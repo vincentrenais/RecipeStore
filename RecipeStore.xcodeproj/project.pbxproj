@@ -15,6 +15,9 @@
 		B7C48DFC1AF5AFBD000F2FB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C48DFB1AF5AFBD000F2FB9 /* Images.xcassets */; };
 		B7C48DFF1AF5AFBD000F2FB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C48DFD1AF5AFBD000F2FB9 /* LaunchScreen.xib */; };
 		B7C48E0B1AF5AFBD000F2FB9 /* RecipeStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C48E0A1AF5AFBD000F2FB9 /* RecipeStoreTests.m */; };
+		B7C48E161AF5BFF4000F2FB9 /* AddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C48E151AF5BFF4000F2FB9 /* AddRecipeViewController.m */; };
+		B7C48E191AF5C020000F2FB9 /* RecipeStoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C48E181AF5C020000F2FB9 /* RecipeStoreTableViewController.m */; };
+		B7C48E1C1AF5C203000F2FB9 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C48E1B1AF5C203000F2FB9 /* Recipe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		B7C48E041AF5AFBD000F2FB9 /* RecipeStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C48E091AF5AFBD000F2FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7C48E0A1AF5AFBD000F2FB9 /* RecipeStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeStoreTests.m; sourceTree = "<group>"; };
+		B7C48E141AF5BFF4000F2FB9 /* AddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecipeViewController.h; sourceTree = "<group>"; };
+		B7C48E151AF5BFF4000F2FB9 /* AddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecipeViewController.m; sourceTree = "<group>"; };
+		B7C48E171AF5C020000F2FB9 /* RecipeStoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeStoreTableViewController.h; sourceTree = "<group>"; };
+		B7C48E181AF5C020000F2FB9 /* RecipeStoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeStoreTableViewController.m; sourceTree = "<group>"; };
+		B7C48E1A1AF5C203000F2FB9 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		B7C48E1B1AF5C203000F2FB9 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,12 @@
 				B7C48DFD1AF5AFBD000F2FB9 /* LaunchScreen.xib */,
 				B7C48DF21AF5AFBD000F2FB9 /* RecipeStore.xcdatamodeld */,
 				B7C48DEB1AF5AFBD000F2FB9 /* Supporting Files */,
+				B7C48E141AF5BFF4000F2FB9 /* AddRecipeViewController.h */,
+				B7C48E151AF5BFF4000F2FB9 /* AddRecipeViewController.m */,
+				B7C48E1A1AF5C203000F2FB9 /* Recipe.h */,
+				B7C48E1B1AF5C203000F2FB9 /* Recipe.m */,
+				B7C48E171AF5C020000F2FB9 /* RecipeStoreTableViewController.h */,
+				B7C48E181AF5C020000F2FB9 /* RecipeStoreTableViewController.m */,
 			);
 			path = RecipeStore;
 			sourceTree = "<group>";
@@ -223,9 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C48DF41AF5AFBD000F2FB9 /* RecipeStore.xcdatamodeld in Sources */,
+				B7C48E1C1AF5C203000F2FB9 /* Recipe.m in Sources */,
 				B7C48DF11AF5AFBD000F2FB9 /* AppDelegate.m in Sources */,
+				B7C48E191AF5C020000F2FB9 /* RecipeStoreTableViewController.m in Sources */,
 				B7C48DF71AF5AFBD000F2FB9 /* ViewController.m in Sources */,
 				B7C48DEE1AF5AFBD000F2FB9 /* main.m in Sources */,
+				B7C48E161AF5BFF4000F2FB9 /* AddRecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
